@@ -6,7 +6,7 @@ AIDIR=$(dirname "$0")/..
 
 function cleanup()
 {
-  popd
+  popd 2>/dev/null
 }
 
 trap cleanup EXIT
@@ -14,6 +14,7 @@ trap cleanup EXIT
 function setupLocalAI()
 {
   pushd ${AIDIR}/LocalAI
+  docker compose down
   docker compose up -d
   popd
 }
