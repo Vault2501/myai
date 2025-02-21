@@ -41,6 +41,6 @@ services:
     env_file:
       - .env
     volumes:
-      - ./models:/models:cached
-      - ./images:/tmp/generated/images/
+      - ../models/localai:/models:cached
+      - ../images:/tmp/generated/images/
       - ./config:/config:cached
