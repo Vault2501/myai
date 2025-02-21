@@ -19,4 +19,16 @@ function setupLocalAI()
   popd
 }
 
-setupLocalAI
+function setupAnything-llm()
+{
+  pushd ${AIDIR}
+  git clone https://github.com/Mintplex-Labs/anything-llm.git
+  cp ${AIDIR}/docker/anything-llm/* ${AIDIR}/anything-llm/docker
+  pushd ${AIDIR}/anything-llm/docker
+  docker compose up
+  popd
+  popd
+}
+
+#setupLocalAI
+setupAnything-llm
