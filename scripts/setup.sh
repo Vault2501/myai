@@ -25,9 +25,18 @@ function setupAnythingllm()
   git clone https://github.com/Mintplex-Labs/anything-llm.git
   cp docker/anything-llm/docker-compose.yaml docker/anything-llm/.env anything-llm/docker
   cd anything-llm/docker
+  docker compose up -d
+  popd
+}
+
+function setupopenwebui()
+{
+  pushd ${AIDIR}/openwebui
+  docker compose down
   docker compose up
   popd
 }
 
 #setupLocalAI
-setupAnythingllm
+#setupAnythingllm
+setupopenwebui
