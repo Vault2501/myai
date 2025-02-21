@@ -16,7 +16,6 @@ services:
           devices:
             - driver: nvidia
               device_ids: ['1']
-              count: 1 
               capabilities: [gpu]
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:8080/readyz"]
