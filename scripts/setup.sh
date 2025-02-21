@@ -13,7 +13,7 @@ trap cleanup EXIT
 
 function setupLocalAI()
 {
-  pushd ${AIDIR}/production/LocalAI
+  pushd ${AIDIR}/LocalAI
   docker compose up -d
   popd
 }
