@@ -22,9 +22,13 @@ function setupLocalAI()
 function setupAnythingllm()
 {
   pushd ${AIDIR}
-  git clone https://github.com/Mintplex-Labs/anything-llm.git
-  cp docker/anything-llm/docker-compose.yaml docker/anything-llm/.env anything-llm/docker
+  if [ ! -d anything-llm ]; then
+    git clone https://github.com/Mintplex-Labs/anything-llm.git
+  fi
+  cp docker/anything-llm/docker-compose.yaml anything-llm/docker/docker-compose.yml
+  cp docker/anything-llm/.env anything-llm/docker
   cd anything-llm/docker
+  docker compose down
   docker compose up -d
   popd
 }
@@ -33,10 +37,10 @@ function setupopenwebui()
 {
   pushd ${AIDIR}/openwebui
   docker compose down
-  docker compose up
+  docker compose up -d
   popd
 }
 
-#setupLocalAI
-#setupAnythingllm
+setupLocalAI
+setupAnythingllm
 setupopenwebui
