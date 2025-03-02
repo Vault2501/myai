@@ -1,0 +1,19 @@
+networks:
+  localai:
+    external: true
+
+services:
+  reverseproxy:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "0.0.0.0:443:443" 
+      - "0.0.0.0:5000:5000" 
+      - "0.0.0.0:5001:5001" 
+      - "0.0.0.0:5002:5002" 
+      - "0.0.0.0:5003:5003" 
+      - "0.0.0.0:80:80" 
+    networks:
+      - localai 
+    restart: always

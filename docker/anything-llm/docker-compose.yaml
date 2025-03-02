@@ -22,8 +22,9 @@ services:
       - "../collector/hotdir/:/app/collector/hotdir"
       - "../collector/outputs/:/app/collector/outputs"
     user: "${UID:-1000}:${GID:-1000}"
-    ports:
-      - "0.0.0.0:80:3001"
+    #ports:
+      #- "0.0.0.0:80:3001"
+      #- "3001:3001"
     env_file:
       - .env
     networks:
