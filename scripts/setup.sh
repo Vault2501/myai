@@ -33,7 +33,22 @@ function setupAnythingllm()
   popd
 }
 
-function setupopenwebui()
+function setupSearxng()
+{
+  pushd ${AIDIR}
+  if [ ! -d searxng ]; then 
+    git clone https://github.com/searxng/searxng.git
+  fi
+  cp docker/searxng/docker-compose.yaml searxng/
+  cp docker/searxng/.env searxng/
+  cp config/searxng/settings.yml searxng/searxng/
+  cd searxng
+  docker compose down
+  docker compose up -d
+  popd
+}
+
+function setupOpenwebui()
 {
   pushd ${AIDIR}/openwebui
   docker compose down
@@ -45,6 +60,7 @@ function setupopenwebui()
   popd
 }
 
-setupLocalAI
-setupAnythingllm
-setupopenwebui
+#setupLocalAI
+#setupAnythingllm
+#setupOpenwebui
+setupSearxng

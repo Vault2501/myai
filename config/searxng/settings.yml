@@ -1,0 +1,34 @@
+# see https://docs.searxng.org/admin/settings/settings.html#settings-use-default-settings
+use_default_settings: true
+server:
+  # base_url is defined in the SEARXNG_BASE_URL environment variable, see .env and docker-compose.yml
+  secret_key: "a3a3de9a4c6ad6df0874a7ca739f6db40503c0edce6e89153f7a0bdb5f0cc863"  # change this!
+  limiter: false  # can be disabled for a private instance
+  image_proxy: true
+  port: 8080
+  bind_address: "0.0.0.0"
+ui:
+  static_use_hash: true
+redis:
+  url: redis://redis:6379/0
+search:
+  safe_search: 0
+  autocomplete: ""
+  default_lang: ""
+  formats:
+    - html
+    - json
+engines:
+  - name: wikidata
+    engine: wikidata
+    shortcut: wd
+#    timeout: 3.0
+#    weight: 2
+#    tests: *tests_infobox
+    enabled: False
+#
+  - name: wikipedia
+    engine: wikipedia
+    shortcut: wp
+    base_url: 'https://{language}.wikipedia.org/'
+    enabled: False
