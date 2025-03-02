@@ -38,6 +38,10 @@ function setupopenwebui()
   pushd ${AIDIR}/openwebui
   docker compose down
   docker compose up -d
+  echo Waiting for first setup
+  sleep 60
+  docker compose down
+  docker compose up -d
   popd
 }
 
