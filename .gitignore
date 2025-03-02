@@ -1,4 +1,5 @@
-anything-llm/*
+nginx/ssl/assets/
+anything-llm/
 openwebui/open-webui
 Localai/config
 images
