@@ -73,8 +73,26 @@ function setupOpenwebuiPipelines()
   popd
 }
 
+function setupTelegramBot()
+{
+  read -s -p "Please enter the Telegram token" TOKEN 
+  pushd ${AIDIR}
+  if [ ! -d chatgpt_telegram_bot ]; then
+    git clone https://github.com/Vault2501/chatgpt_telegram_bot 
+  fi
+  cp docker/chatgpt_telegram_bot/docker-compose.yml chatgpt_telegram_bot/
+  cp config/chatgpt_telegram_bot/config.yml chatgpt_telegram_bot/config/
+  cp config/chatgpt_telegram_bot/config.env chatgpt_telegram_bot/config/
+  sed -i "s/telegram_token:.*/telegram_token: \"$TOKEN\"/" chatgpt_telegram_bot/config/config.yml
+  cd chatgpt_telegram_bot
+  docker compose down
+  docker compose up --build -d
+  popd
+}
+
 #setupLocalAI
 #setupSearxng
 #setupAnythingllm
 #setupOpenwebui
-setupOpenwebuiPipelines
+#setupOpenwebuiPipelines
+setupTelegramBot

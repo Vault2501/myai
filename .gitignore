@@ -1,5 +1,6 @@
 nginx/ssl/assets/
 anything-llm/
+chatgpt_telegram_bot/
 searxng/
 pipelines/
 openwebui/open-webui
