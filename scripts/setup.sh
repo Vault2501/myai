@@ -90,9 +90,18 @@ function setupTelegramBot()
   popd
 }
 
-#setupLocalAI
-#setupSearxng
-#setupAnythingllm
-#setupOpenwebui
-#setupOpenwebuiPipelines
+function setupNgix()
+{
+  pushd ${AIDIR}/nginx
+  docker compose down
+  docker compose up -d
+  popd
+}
+
+setupLocalAI
+setupSearxng
+setupAnythingllm
+setupOpenwebui
+setupOpenwebuiPipelines
 setupTelegramBot
+setupNginx
