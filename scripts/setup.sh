@@ -60,7 +60,21 @@ function setupOpenwebui()
   popd
 }
 
+function setupOpenwebuiPipelines()
+{
+  pushd ${AIDIR}
+  if [ ! -d pipelines ]; then
+    git clone https://github.com/open-webui/pipelines.git
+  fi
+  cp docker/pipelines/docker-compose.yaml pipelines
+  cd pipelines
+  docker compose down
+  docker compose up -d
+  popd
+}
+
 #setupLocalAI
+#setupSearxng
 #setupAnythingllm
 #setupOpenwebui
-setupSearxng
+setupOpenwebuiPipelines

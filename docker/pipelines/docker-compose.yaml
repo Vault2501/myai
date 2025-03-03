@@ -1,0 +1,20 @@
+networks:
+    localai:
+          external: true
+
+services:
+  pipelines:
+    networks:
+      - localai 
+    ports:
+      - 9099:9099
+#    environment:
+#      - PIPELINES_URLS='https://github.com/open-webui/pipelines/blob/main/examples/filters/detoxify_filter_pipeline.py'
+    volumes:
+      - pipelines:/app/pipelines
+    container_name: open-webui-pipelines
+    restart: always
+    image: ghcr.io/open-webui/pipelines:main
+volumes:
+  pipelines:
+    external: false
