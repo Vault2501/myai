@@ -41,6 +41,7 @@ function setupSearxng()
   fi
   cp docker/searxng/docker-compose.yaml searxng/
   cp docker/searxng/.env searxng/
+  mkdir searxng/searxng
   cp config/searxng/settings.yml searxng/searxng/
   cd searxng
   docker compose down
