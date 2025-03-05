@@ -91,6 +91,19 @@ function setupTelegramBot()
   popd
 }
 
+function setupComfyUI()
+{
+  pushd ${AIDIR}
+  if [ ! -d ComfyUI-Docker ]; then 
+    git clone https://github.com/YanWenKun/ComfyUI-Docker.git 
+  fi
+  cp docker/cu124-megapak/docker-compose.yaml ComfyUI-Docker/cu124-megapak/
+  cd ComfyUI-Docker/cu124-megapak
+  docker compose down
+  docker compose up -d
+  popd
+}
+
 function setupNgix()
 {
   pushd ${AIDIR}/nginx
@@ -104,5 +117,6 @@ setupSearxng
 setupAnythingllm
 setupOpenwebui
 setupOpenwebuiPipelines
+setupComfyUI
 setupTelegramBot
 setupNginx
