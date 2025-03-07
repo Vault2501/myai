@@ -104,6 +104,24 @@ function setupComfyUI()
   popd
 }
 
+function setupSstableDiffusionWebui()
+{
+  pushd ${AIDIR}
+  if [ ! -d ComfyUI-Docker ]; then 
+    git clone https://github.com/AbdBarho/stable-diffusion-webui-docker.git 
+  fi
+  cp docker/stable-diffusion-webui-docker/docker-compose.yaml stable-diffusion-webui-docker/
+  # temp fix, todo: fork git and replace there
+  cp docker/stable-diffusion-webui-docker/Dockerfile stable-diffusion-webui-docker/services/AUTOMATIC1111/
+  cd stable-diffusion-webui-docker 
+  docker compose down
+  # download models
+  docker compose --profile download up --build
+  # start container
+  docker compose --profile auto up --build
+  popd
+}
+
 function setupNgix()
 {
   pushd ${AIDIR}/nginx
@@ -118,5 +136,6 @@ setupAnythingllm
 setupOpenwebui
 setupOpenwebuiPipelines
 setupComfyUI
+setupSstableDiffusionWebui
 setupTelegramBot
 setupNginx
