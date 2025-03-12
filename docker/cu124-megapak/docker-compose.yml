@@ -12,11 +12,15 @@ services:
       dockerfile: Dockerfile
     image: "yanwk/comfyui-boot:cu124-megapak"
     ports:
-      - "8188:8188"
+      - "0.0.0.0:8188:8188"
     networks:
       - localai
     volumes:
       - "./storage:/root"
+      - "../../models/ComfyUI:/root/ComfyUI/models"
+      - "../../input/ComfyUI:/root/ComfyUI/input"
+      - "../../output/ComfyUI:/root/ComfyUI/output"
+      - "../../workflows/ComfyUI:/root/ComfyUI/user/default/workflows/"
     environment:
       - CLI_ARGS=
     security_opt:
