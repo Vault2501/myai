@@ -102,12 +102,16 @@ def install_pack(pack, model_dir, cache_dir):
         if (not check_model(model_file, model['sha256'])):
             if (check_cache(model, cache_path)):
                 copy_cache(model, cache_path, model_file)
+                print("MODEL OK FROM CACHE")
             else:
                 download(model['url'],model_file)
                 if (check_sha256(model_file, model['sha256'])):
+                    print("MODEL OK FROM DOWNLOAD")
                     backup(model, cache_path, model_file)
                 else:
-                    print("  - sha256 wrong, download failed")
+                    print("______________________________________")
+                    print("ERROR  - sha256 wrong, download failed")
+                    print("______________________________________")
 
 
 with open('../config/models.yaml', 'r') as modelsFile:

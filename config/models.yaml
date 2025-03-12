@@ -12,6 +12,557 @@ packs:
         path: 'ComfyUI/checkpoints/'
         type: checkpoint 
 
+  - name: 'SD1.5'
+    app: ComfyUI
+    output: image
+    models:
+      - filename: 'v1-5-pruned-emaonly-fp16.safetensors'
+        url: 'https://huggingface.co/Comfy-Org/stable-diffusion-v1-5-archive/resolve/main/v1-5-pruned-emaonly-fp16.safetensors'
+        sha256: 'e9476a13728cd75d8279f6ec8bad753a66a1957ca375a1464dc63b37db6e3916'
+        path: 'ComfyUI/checkpoints/'
+        type: checkpoint
+
+  - name: 'SD2.1'
+    app: ComfyUI
+    output: image
+    models:
+      - filename: 'v2-1_768-ema-pruned.ckpt'
+        url: 'https://huggingface.co/stabilityai/stable-diffusion-2-1/resolve/main/v2-1_768-ema-pruned.ckpt'
+        sha256: 'ad2a33c361c1f593c4a1fb32ea81afce2b5bb7d1983c6b94793a26a3b54b08a0'
+        path: 'ComfyUI/checkpoints/'
+        type: checkpoint
+
+  - name: 'WD-1.5'
+    app: ComfyUI
+    output: image
+    models:
+      - filename: 'wd-illusion-fp16.safetensors'
+        url: 'https://huggingface.co/waifu-diffusion/wd-1-5-beta3/resolve/main/wd-illusion-fp16.safetensors'
+        sha256: 'ea4e0d6b79943cabed61a0491086c5c626d3290bde815b5afb43d0e4e3a0caa8'
+        path: 'ComfyUI/checkpoints/'
+        type: checkpoint
+
+  - name: 'ControlNet Original'
+    app: ComfyUI
+    output: image
+    models:
+      - filename: 'control_v11e_sd15_ip2p.pth'
+        url: 'https://huggingface.co/lllyasviel/ControlNet-v1-1/resolve/main/control_v11e_sd15_ip2p.pth'
+        sha256: 'a8d77429b111b25ffad4adb4c686a19c73c905d638dd8acb1e0b1d1da300192c'
+        path: 'ComfyUI/controlnet'
+        type: controlnet
+      - filename: 'control_v11e_sd15_shuffle.pth'
+        url: 'https://huggingface.co/lllyasviel/ControlNet-v1-1/resolve/main/control_v11e_sd15_shuffle.pth'
+        sha256: '657f632c35176c467e71c471b55b1a0e94ae1a49d739e1b705624f454e638e1d'
+        path: 'ComfyUI/controlnet'
+        type: controlnet
+      - filename: 'control_v11f1e_sd15_tile.pth'
+        url: 'https://huggingface.co/lllyasviel/ControlNet-v1-1/resolve/main/control_v11f1e_sd15_tile.pth'
+        sha256: '8aa69b8d391e72c2fced6a650268137dc0ed594cafe8a2c0f8b994799a21979b'
+        path: 'ComfyUI/controlnet'
+        type: controlnet
+      - filename: 'control_v11f1p_sd15_depth.pth'
+        url: 'https://huggingface.co/lllyasviel/ControlNet-v1-1/resolve/main/control_v11f1p_sd15_depth.pth'
+        sha256: '761077ffe369fe8cf16ae353f8226bd4ca29805b161052f82c0170c7b50f1d99'
+        path: 'ComfyUI/controlnet'
+        type: controlnet
+      - filename: 'control_v11p_sd15_canny.pth'
+        url: 'https://huggingface.co/lllyasviel/ControlNet-v1-1/resolve/main/control_v11p_sd15_canny.pth'
+        sha256: 'f99cfe4c70910e38e3fece9918a4979ed7d3dcf9b81cee293e1755363af5406a'
+        path: 'ComfyUI/controlnet'
+        type: controlnet
+      - filename: 'control_v11p_sd15_inpaint.pth'
+        url: 'https://huggingface.co/lllyasviel/ControlNet-v1-1/resolve/main/control_v11p_sd15_inpaint.pth'
+        sha256: 'a2a0ff91882a0fbacbded5edeca7babdb6d1bd8f770880a91c177bd44cd58633'
+        path: 'ComfyUI/controlnet'
+        type: controlnet
+      - filename: 'control_v11p_sd15_lineart.pth'
+        url: 'https://huggingface.co/lllyasviel/ControlNet-v1-1/resolve/main/control_v11p_sd15_lineart.pth'
+        sha256: 'fb5fb912696830da948e5056b50adfa3fcc68ff760c43e4e7a8499853af43c61'
+        path: 'ComfyUI/controlnet'
+        type: controlnet
+      - filename: 'control_v11p_sd15_mlsd.pth'
+        url: 'https://huggingface.co/lllyasviel/ControlNet-v1-1/resolve/main/control_v11p_sd15_mlsd.pth'
+        sha256: '22dab177f4c4566ac1c8f68dc2c429b023114e15a644e8c7c0e8f956afe92acf'
+        path: 'ComfyUI/controlnet'
+        type: controlnet
+      - filename: 'control_v11p_sd15_normalbae.pth'
+        url: 'https://huggingface.co/lllyasviel/ControlNet-v1-1/resolve/main/control_v11p_sd15_normalbae.pth'
+        sha256: '9608158c204261259f4b5a7815ced8f5c15e5de4e30a9403d07f68f29f81e941'
+        path: 'ComfyUI/controlnet'
+        type: controlnet
+      - filename: 'control_v11p_sd15_openpose.pth'
+        url: 'https://huggingface.co/lllyasviel/ControlNet-v1-1/resolve/main/control_v11p_sd15_openpose.pth'
+        sha256: 'db97becd92cd19aff71352a60e93c2508decba3dee64f01f686727b9b406a9dd'
+        path: 'ComfyUI/controlnet'
+        type: controlnet
+      - filename: 'control_v11p_sd15_scribble.pth'
+        url: 'https://huggingface.co/lllyasviel/ControlNet-v1-1/resolve/main/control_v11p_sd15_scribble.pth'
+        sha256: '14d33e8bc14ba679595d976789e4eedc36a3d2d21866ab5896355a7e6677749f'
+        path: 'ComfyUI/controlnet'
+        type: controlnet
+      - filename: 'control_v11p_sd15_seg.pth'
+        url: 'https://huggingface.co/lllyasviel/ControlNet-v1-1/resolve/main/control_v11p_sd15_seg.pth'
+        sha256: 'bad6d753886c0edc978e79dfb06083737ab1bd9702e5b7c0f81b1e16a5ed12cc'
+        path: 'ComfyUI/controlnet'
+        type: controlnet
+      - filename: 'control_v11p_sd15_softedge.pth'
+        url: 'https://huggingface.co/lllyasviel/ControlNet-v1-1/resolve/main/control_v11p_sd15_softedge.pth'
+        sha256: '20759ef71a109c4796e637d86eea8db492ec9772b6d5cb7a9afd077847b403f3'
+        path: 'ComfyUI/controlnet'
+        type: controlnet
+      - filename: 'control_v11p_sd15s2_lineart_anime.pth'
+        url: 'https://huggingface.co/lllyasviel/ControlNet-v1-1/resolve/main/control_v11p_sd15s2_lineart_anime.pth'
+        sha256: '59169ab86e8ae15ad50208cc5832f1cc598b95391d4482ba742b344c8f7f6904'
+        path: 'ComfyUI/controlnet'
+        type: controlnet
+
+  - name: 'ControlNet fp16'
+    app: ComfyUI
+    output: image
+    models:
+      - filename: 'control_v11e_sd15_ip2p_fp16.safetensors'
+        url: 'https://huggingface.co/comfyanonymous/ControlNet-v1-1_fp16_safetensors/resolve/main/control_v11e_sd15_ip2p_fp16.safetensors'
+        sha256: '11e7dbe52a73f66e701c1faa77b8a2cb0ee3abd721e1cae31123f5b299093435'
+        path: 'ComfyUI/controlnet'
+        type: controlnet
+      - filename: 'control_v11e_sd15_shuffle_fp16.safetensors'
+        url: 'https://huggingface.co/comfyanonymous/ControlNet-v1-1_fp16_safetensors/resolve/main/control_v11e_sd15_shuffle_fp16.safetensors'
+        sha256: '8cc77ae071888abefd6e80bafce3d2574f9f6f8aac7ab205db98fb12a53c1132'
+        path: 'ComfyUI/controlnet'
+        type: controlnet
+      - filename: 'control_v11f1e_sd15_tile_fp16.safetensors'
+        url: 'https://huggingface.co/comfyanonymous/ControlNet-v1-1_fp16_safetensors/resolve/main/control_v11f1e_sd15_tile_fp16.safetensors'
+        sha256: '2f31868eedb243a77932e3c63907a6ba0a2058b6d65b5c27b89ee1b7f618ea33'
+        path: 'ComfyUI/controlnet'
+        type: controlnet
+      - filename: 'control_v11f1p_sd15_depth_fp16.safetensors'
+        url: 'https://huggingface.co/comfyanonymous/ControlNet-v1-1_fp16_safetensors/resolve/main/control_v11f1p_sd15_depth_fp16.safetensors'
+        sha256: '1c4a79aa52fb63f607cb9ff479ea5aa1923b6ceb21267bd14b69bd05d7b617be'
+        path: 'ComfyUI/controlnet'
+        type: controlnet
+      - filename: 'control_v11p_sd15_canny_fp16.safetensors'
+        url: 'https://huggingface.co/comfyanonymous/ControlNet-v1-1_fp16_safetensors/resolve/main/control_v11p_sd15_canny_fp16.safetensors'
+        sha256: '8932b66e15aae835b3490dbf989f56c253104cee08a88bf21283762f557c9f10'
+        path: 'ComfyUI/controlnet'
+        type: controlnet
+      - filename: 'control_v11p_sd15_inpaint_fp16.safetensors'
+        url: 'https://huggingface.co/comfyanonymous/ControlNet-v1-1_fp16_safetensors/resolve/main/control_v11p_sd15_inpaint_fp16.safetensors'
+        sha256: '677a4fe351edecd40cd0d7cc210a8686b59d4e55207317f12319ef746a7a5a89'
+        path: 'ComfyUI/controlnet'
+        type: controlnet
+      - filename: 'control_v11p_sd15_lineart_fp16.safetensors'
+        url: 'https://huggingface.co/comfyanonymous/ControlNet-v1-1_fp16_safetensors/resolve/main/control_v11p_sd15_lineart_fp16.safetensors'
+        sha256: '10559106d1bb8196298b7a81565ede9279295d2b2df15165b9dbe189994def56'
+        path: 'ComfyUI/controlnet'
+        type: controlnet
+      - filename: 'control_v11p_sd15_mlsd_fp16.safetensors'
+        url: 'https://huggingface.co/comfyanonymous/ControlNet-v1-1_fp16_safetensors/resolve/main/control_v11p_sd15_mlsd_fp16.safetensors'
+        sha256: '0d689682fcc9341581b788524ab813cda789acdbc16bdbecbd1b9d2221e119b7'
+        path: 'ComfyUI/controlnet'
+        type: controlnet
+      - filename: 'control_v11p_sd15_normalbae_fp16.safetensors'
+        url: 'https://huggingface.co/comfyanonymous/ControlNet-v1-1_fp16_safetensors/resolve/main/control_v11p_sd15_normalbae_fp16.safetensors'
+        sha256: '79864bfc3a1df58ed35bd92fc8dd1e4d7b85cac424cc427b9049ddc7647cceec'
+        path: 'ComfyUI/controlnet'
+        type: controlnet
+      - filename: 'control_v11p_sd15_openpose_fp16.safetensors'
+        url: 'https://huggingface.co/comfyanonymous/ControlNet-v1-1_fp16_safetensors/resolve/main/control_v11p_sd15_openpose_fp16.safetensors'
+        sha256: '4003c1da17b0e4ba444e02140e1c0d83bb24b79e4dcfd613c3a554d38f0f89c7'
+        path: 'ComfyUI/controlnet'
+        type: controlnet
+      - filename: 'control_v11p_sd15_scribble_fp16.safetensors'
+        url: 'https://huggingface.co/comfyanonymous/ControlNet-v1-1_fp16_safetensors/resolve/main/control_v11p_sd15_scribble_fp16.safetensors'
+        sha256: '99edfd25b54c18c0ab19fba8c5618f741aac1f8c3101e7fa62cce925ad87ae68'
+        path: 'ComfyUI/controlnet'
+        type: controlnet
+      - filename: 'control_v11p_sd15_seg_fp16.safetensors'
+        url: 'https://huggingface.co/comfyanonymous/ControlNet-v1-1_fp16_safetensors/resolve/main/control_v11p_sd15_seg_fp16.safetensors'
+        sha256: 'acd4dd3df2da2f1f2b9dd00f4504cc0d98b20afb608e25f1789a95c0ccdba14a'
+        path: 'ComfyUI/controlnet'
+        type: controlnet
+      - filename: 'control_v11p_sd15_softedge_fp16.safetensors'
+        url: 'https://huggingface.co/comfyanonymous/ControlNet-v1-1_fp16_safetensors/resolve/main/control_v11p_sd15_softedge_fp16.safetensors'
+        sha256: 'e78fea5b4599fec2ecd7e3f14b171feb290b88200c95d569ec0ff59a19bc3478'
+        path: 'ComfyUI/controlnet'
+        type: controlnet
+      - filename: 'control_v11p_sd15s2_lineart_anime_fp16.safetensors'
+        url: 'https://huggingface.co/comfyanonymous/ControlNet-v1-1_fp16_safetensors/resolve/main/control_v11p_sd15s2_lineart_anime_fp16.safetensors'
+        sha256: '067bf845109afdd1049bd9553d44faed1ad53691bd6b5ac9ee31c87466ef7c27'
+        path: 'ComfyUI/controlnet'
+        type: controlnet
+      - filename: 'control_v11u_sd15_tile_fp16.safetensors'
+        url: 'https://huggingface.co/comfyanonymous/ControlNet-v1-1_fp16_safetensors/resolve/main/control_v11u_sd15_tile_fp16.safetensors'
+        sha256: '387ac74221099dcd163b3a76060d0fae441301e169646f186875f620b1287a8f'
+        path: 'ComfyUI/controlnet'
+        type: controlnet
+
+
+  - name: 'ControlNet fp16 Lora'
+    app: ComfyUI
+    output: image
+    models:
+      - filename: 'control_lora_rank128_v11e_sd15_ip2p_fp16.safetensors'
+        url: 'https://huggingface.co/comfyanonymous/ControlNet-v1-1_fp16_safetensors/resolve/main/control_lora_rank128_v11e_sd15_ip2p_fp16.safetensors'
+        sha256: 'cc91b1c7797ac13bd26847189da86a2d94ffcad6c33cabe0c9449c3525f021ff'
+        path: 'ComfyUI/controlnet'
+        type: controlnet
+      - filename: 'control_lora_rank128_v11e_sd15_shuffle_fp16.safetensors'
+        url: 'https://huggingface.co/comfyanonymous/ControlNet-v1-1_fp16_safetensors/resolve/main/control_lora_rank128_v11e_sd15_shuffle_fp16.safetensors'
+        sha256: 'f4abc3edee9440b5166e3ad956bf04aa3134e2736644be2f2627e98c9e14edb3'
+        path: 'ComfyUI/controlnet'
+        type: controlnet
+      - filename: 'control_lora_rank128_v11f1e_sd15_tile_fp16.safetensors'
+        url: 'https://huggingface.co/comfyanonymous/ControlNet-v1-1_fp16_safetensors/resolve/main/control_lora_rank128_v11f1e_sd15_tile_fp16.safetensors'
+        sha256: 'cec00369e99cfed1cec97e1124cf3220df7a99e45354eaa1e3350c485e65154f'
+        path: 'ComfyUI/controlnet'
+        type: controlnet
+      - filename: 'control_lora_rank128_v11f1p_sd15_depth_fp16.safetensors'
+        url: 'https://huggingface.co/comfyanonymous/ControlNet-v1-1_fp16_safetensors/resolve/main/control_lora_rank128_v11f1p_sd15_depth_fp16.safetensors'
+        sha256: '7a0480805947f377985a8c2684b8e52cdd265fcb25b6604ea9409ace08db3d34'
+        path: 'ComfyUI/controlnet'
+        type: controlnet
+      - filename: 'control_lora_rank128_v11p_sd15_canny_fp16.safetensors'
+        url: 'https://huggingface.co/comfyanonymous/ControlNet-v1-1_fp16_safetensors/resolve/main/control_lora_rank128_v11p_sd15_canny_fp16.safetensors'
+        sha256: '45053d341ac36d8559ad301438fc08b320421e782a5ec8888ab8af16b7763c6b'
+        path: 'ComfyUI/controlnet'
+        type: controlnet
+      - filename: 'control_lora_rank128_v11p_sd15_inpaint_fp16.safetensors'
+        url: 'https://huggingface.co/comfyanonymous/ControlNet-v1-1_fp16_safetensors/resolve/main/control_lora_rank128_v11p_sd15_inpaint_fp16.safetensors'
+        sha256: 'b0dbe399683f8579a8c0922c859832a27239bd7b22473fc8e7b21f1f163342c6'
+        path: 'ComfyUI/controlnet'
+        type: controlnet
+      - filename: 'control_lora_rank128_v11p_sd15_lineart_fp16.safetensors'
+        url: 'https://huggingface.co/comfyanonymous/ControlNet-v1-1_fp16_safetensors/resolve/main/control_lora_rank128_v11p_sd15_lineart_fp16.safetensors'
+        sha256: '9d3a91b6d55a3123483deb09f71cc558a0bd54e5ec4142f5187984dbd2e099d1'
+        path: 'ComfyUI/controlnet'
+        type: controlnet
+      - filename: 'control_lora_rank128_v11p_sd15_mlsd_fp16.safetensors'
+        url: 'https://huggingface.co/comfyanonymous/ControlNet-v1-1_fp16_safetensors/resolve/main/control_lora_rank128_v11p_sd15_mlsd_fp16.safetensors'
+        sha256: '847b24001b800db4d7ccff0cd84f93747c04fd6604400d9b95e4701a2aa487d9'
+        path: 'ComfyUI/controlnet'
+        type: controlnet
+      - filename: 'control_lora_rank128_v11p_sd15_normalbae_fp16.safetensors'
+        url: 'https://huggingface.co/comfyanonymous/ControlNet-v1-1_fp16_safetensors/resolve/main/control_lora_rank128_v11p_sd15_normalbae_fp16.safetensors'
+        sha256: 'ca84010a8e832d3d2e671c7664ff345f645f3ef7e8359cbca3e2b36d86bcff30'
+        path: 'ComfyUI/controlnet'
+        type: controlnet
+      - filename: 'control_lora_rank128_v11p_sd15_openpose_fp16.safetensors'
+        url: 'https://huggingface.co/comfyanonymous/ControlNet-v1-1_fp16_safetensors/resolve/main/control_lora_rank128_v11p_sd15_openpose_fp16.safetensors'
+        sha256: '6c8edde249e6b96f6c9b0516a243d75eb8adc38624efe171a9c8ab5fb1a69608'
+        path: 'ComfyUI/controlnet'
+        type: controlnet
+      - filename: 'control_lora_rank128_v11p_sd15_scribble_fp16.safetensors'
+        url: 'https://huggingface.co/comfyanonymous/ControlNet-v1-1_fp16_safetensors/resolve/main/control_lora_rank128_v11p_sd15_scribble_fp16.safetensors'
+        sha256: 'f1f0288cd6d490d9976a9f4c36282f3d47cb8e02dc6805aa44b38d4404fe008a'
+        path: 'ComfyUI/controlnet'
+        type: controlnet
+      - filename: 'control_lora_rank128_v11p_sd15_seg_fp16.safetensors'
+        url: 'https://huggingface.co/comfyanonymous/ControlNet-v1-1_fp16_safetensors/resolve/main/control_lora_rank128_v11p_sd15_seg_fp16.safetensors'
+        sha256: '11937941597a67150ef0f74aa30f082b1634431080dee609d0231a9a59b7fa4f'
+        path: 'ComfyUI/controlnet'
+        type: controlnet
+      - filename: 'control_lora_rank128_v11p_sd15_softedge_fp16.safetensors'
+        url: 'https://huggingface.co/comfyanonymous/ControlNet-v1-1_fp16_safetensors/resolve/main/control_lora_rank128_v11p_sd15_softedge_fp16.safetensors'
+        sha256: '010892aca91ec3028eb66b34b6ba3079a6db54da85ed4b08f172e0d06af9b17d'
+        path: 'ComfyUI/controlnet'
+        type: controlnet
+      - filename: 'control_lora_rank128_v11p_sd15s2_lineart_anime_fp16.safetensors'
+        url: 'https://huggingface.co/comfyanonymous/ControlNet-v1-1_fp16_safetensors/resolve/main/control_lora_rank128_v11p_sd15s2_lineart_anime_fp16.safetensors'
+        sha256: 'ab6b9cf7c910b85218c041728b0f02cd2ac2f2155abb96a228032252b878afd6'
+        path: 'ComfyUI/controlnet'
+        type: controlnet
+
+  - name: 'Embeddings'
+    app: ComfyUI
+    output: image
+    models:
+      - filename: 'SDA768.pt'
+        url: 'https://huggingface.co/XuminYu/example_safetensors/resolve/8de9cd7d5bb1c5cab295e019f05d1b54e7f42441/embeddings/SDA768.pt'
+        sha256: '40aeca21e12c61bb8ff58a55e61a9b8e092f156807d15148fade034f3a85a3b3'
+        path: 'ComfyUI/embeddings/'
+        type: embedding
+
+  - name: 'Inpainting'
+    app: ComfyUI
+    output: image
+    models:
+      - filename: '512-inpainting-ema.safetensors'
+        url: 'https://huggingface.co/stabilityai/stable-diffusion-2-inpainting/resolve/main/512-inpainting-ema.safetensors'
+        sha256: 'b29e2ed9a8fe58e76f7e801bda091d23738bd74c1da3f339bcbe2d40922fcb60'
+        path: 'ComfyUI/checkpoints/'
+        type: checkpoint
+
+  - name: 'Real-ESRGAN'
+    app: ComfyUI
+    output: image
+    models:
+      - filename: 'RealESRGAN_x2.pth'
+        url: 'https://huggingface.co/ai-forever/Real-ESRGAN/resolve/main/RealESRGAN_x2.pth'
+        sha256: 'c830d067d54fc767b9543a8432f36d91bc2de313584e8bbfe4ac26a47339e899'
+        path: 'ComfyUI/upscale_models/'
+        type: upscale_model
+      - filename: 'RealESRGAN_x4.pth'
+        url: 'https://huggingface.co/ai-forever/Real-ESRGAN/resolve/main/RealESRGAN_x4.pth'
+        sha256: 'aa00f09ad753d88576b21ed977e97d634976377031b178acc3b5b238df463400'
+        path: 'ComfyUI/upscale_models/'
+        type: upscale_model
+      - filename: 'RealESRGAN_x8.pth'
+        url: 'https://huggingface.co/ai-forever/Real-ESRGAN/resolve/main/RealESRGAN_x8.pth'
+        sha256: '8b72fb469d12f05a4770813d2603eb1b550f40df6fb8b37d6c7bc2db3d2bff5e'
+        path: 'ComfyUI/upscale_models/'
+        type: upscale_model
+
+  - name: 'Area Composition'
+    app: ComfyUI
+    output: image
+    models:
+      - filename: 'Anything-V3.0.ckpt'
+        url: 'https://huggingface.co/xiaolxl/Stable-diffusion-models/resolve/main/Anything-V3.0.ckpt'
+        sha256: 'af6639dad89094cfd4fd3361a8fbbaa7dd3b01657bd3e5cf573bbe58b5de91e8'
+        path: 'ComfyUI/checkpoints/'
+        type: checkpoint
+      - filename: 'AbyssOrangeMix2_hard.safetensors'
+        url: 'https://huggingface.co/WarriorMama777/OrangeMixs/resolve/main/Models/AbyssOrangeMix2/AbyssOrangeMix2_hard.safetensors'
+        sha256: '0fc198c4908e98d7aae2a76bd78fa004e9c21cb0be7582e36008b4941169f18e'
+        path: 'ComfyUI/checkpoints/'
+        type: checkpoint
+
+  - name: 'GLIGEN'
+    app: ComfyUI
+    output: image
+    models:
+      - filename: 'gligen_sd14_textbox_pruned.safetensors'
+        url: 'https://huggingface.co/comfyanonymous/GLIGEN_pruned_safetensors/resolve/main/gligen_sd14_textbox_pruned.safetensors'
+        sha256: '47060c8264396409c93f3a07a4fbad950d89819fe40af509745305138ed01fdd'
+        path: 'ComfyUI/gligen/'
+        type: gligen
+      - filename: 'gligen_sd14_textbox_pruned_fp16.safetensors'
+        url: 'https://huggingface.co/comfyanonymous/GLIGEN_pruned_safetensors/resolve/main/gligen_sd14_textbox_pruned_fp16.safetensors'
+        sha256: '3183c006351c033c3b183ac0a2c35f72a79c9ec0fcba3df9a05afd4320d116b2'
+        path: 'ComfyUI/gligen/'
+        type: gligen
+
+  - name: '3D'
+    app: ComfyUI
+    output: image
+    models:
+      - filename: 'stable_zero123.ckpt'
+        url: 'https://huggingface.co/stabilityai/stable-zero123/resolve/main/stable_zero123.ckpt'
+        sha256: 'a28d471b0f450881faf0685335a9ace0c12191c007d285862012747ab4b80f6b'
+        path: 'ComfyUI/checkpoints/'
+        type: checkpoint
+
+  - name: 'Hypernetwork'
+    app: ComfyUI
+    output: image
+    models:
+      - filename: 'dantionMarbleStatues_10.pt'
+        url: 'https://huggingface.co/mirroring/civitai_mirror/resolve/a4008aa58bccf7e7d4deb6d91d6bafe0f26fc94c/models/hypernetworks/dantionMarbleStatues_10.pt'
+        sha256: 'a7e8cafd7e4b5c95b6f64fbc9c09d80241e946a6fedefcf6ca3e78f63c71cd1a'
+        path: 'ComfyUI/hypernetworks/'
+        type: hypernetwork
+
+  - name: 'Pixart Sigma'
+    app: ComfyUI
+    output: image
+    models:
+      - filename: 'pixart_sigma-FP16.safetensors'
+        url: 'https://huggingface.co/martin-rizzo/AbominableWorkflows/resolve/main/pixart_sigma-FP16.safetensors'
+        sha256: '3eabde846e91c7d43fb86f9402389fc34dac0d478006b6bf215a297034acc104'
+        path: 'ComfyUI/checkpoints/'
+        type: checkpoint
+      - filename: 'photon_refiner-FP16.safetensors'
+        url: 'https://huggingface.co/martin-rizzo/AbominableWorkflows/resolve/main/photon_refiner-FP16.safetensors'
+        sha256: 'c92c45f898610d840b63acba5d194789b9350210717e8931d537f103d6228976'
+        path: 'ComfyUI/checkpoints/'
+        type: checkpoint
+      - filename: 't5_xxl_encoder-FP8.safetensors'
+        url: 'https://huggingface.co/martin-rizzo/AbominableWorkflows/resolve/main/t5_xxl_encoder-FP8.safetensors'
+        sha256: '7d330da4816157540d6bb7838bf63a0f02f573fc48ca4d8de34bb0cbfd514f09'
+        path: 'ComfyUI/clip/'
+        type: clip
+      - filename: 'pixart_vae.safetensors'
+        url: 'https://huggingface.co/martin-rizzo/AbominableWorkflows/resolve/main/pixart_vae.safetensors'
+        sha256: '216de6908bf4a9d16fdbef9e57c405c7e01e97fe5a5188dba3c3a5c306797fc0'
+        path: 'ComfyUI/vae/'
+        type: vae
+
+  - name: 'SDXL Turbo'
+    app: ComfyUI
+    output: image
+    models:
+      - filename: 'sd_xl_turbo_1.0_fp16.safetensors'
+        url: 'https://huggingface.co/stabilityai/sdxl-turbo/resolve/main/sd_xl_turbo_1.0_fp16.safetensors'
+        sha256: 'e869ac7d6942cb327d68d5ed83a40447aadf20e0c3358d98b2cc9e270db0da26'
+        path: 'ComfyUI/checkpoints/'
+        type: checkpoint
+
+  - name: 'SDXL'
+    app: ComfyUI
+    output: image
+    models:
+      - filename: 'sd_xl_base_1.0.safetensors'
+        url: 'https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_base_1.0.safetensors'
+        sha256: '31e35c80fc4829d14f90153f4c74cd59c90b779f6afe05a74cd6120b893f7e5b'
+        path: 'ComfyUI/checkpoints/'
+        type: checkpoint
+      - filename: 'sd_xl_refiner_1.0.safetensors'
+        url: 'https://huggingface.co/stabilityai/stable-diffusion-xl-refiner-1.0/resolve/main/sd_xl_refiner_1.0.safetensors'
+        sha256: '7440042bbdc8a24813002c09b6b69b64dc90fded4472613437b7f55f9b7d9c5f'
+        path: 'ComfyUI/checkpoints/'
+        type: checkpoint
+      - filename: 'clip_vision_g.safetensors'
+        url: 'https://huggingface.co/comfyanonymous/clip_vision_g/resolve/main/clip_vision_g.safetensors'
+        sha256: '9908329b3ead722a693ea400fab1d7c9ec91d6736fd194a94d20d793457f9c2e'
+        path: 'ComfyUI/clip_vision/'
+        type: clip_vision
+
+  - name: 'Flux'
+    app: ComfyUI
+    output: image
+    models:
+      - filename: 'flux_ae.safetensors'
+        url: 'https://huggingface.co/black-forest-labs/FLUX.1-schnell/resolve/main/ae.safetensors'
+        sha256: 'afc8e28272cd15db3919bacdb6918ce9c1ed22e96cb12c4d5ed0fba823529e38'
+        path: 'ComfyUI/vae/'
+        type: vae
+      - filename: 'flux1-dev.safetensors'
+        url: 'https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/flux1-dev.safetensors'
+        sha256: '4610115bb0c89560703c892c59ac2742fa821e60ef5871b33493ba544683abd7'
+        path: 'ComfyUI/diffusion_models/'
+        type: diffusion_model
+      - filename: 'flux1-schnell.safetensors'
+        url: 'https://huggingface.co/black-forest-labs/FLUX.1-schnell/resolve/main/flux1-schnell.safetensors'
+        sha256: '9403429e0052277ac2a87ad800adece5481eecefd9ed334e1f348723621d2a0a'
+        path: 'ComfyUI/diffusion_models/'
+        type: diffusion_model
+      - filename: 'flux1-dev-fp8.safetensors'
+        url: 'https://huggingface.co/Comfy-Org/flux1-dev/resolve/main/flux1-dev-fp8.safetensors'
+        sha256: '8e91b68084b53a7fc44ed2a3756d821e355ac1a7b6fe29be760c1db532f3d88a'
+        path: 'ComfyUI/checkpoints/'
+        type: checkpoint 
+      - filename: 'flux1-schnell-fp8.safetensors'
+        url: 'https://huggingface.co/Comfy-Org/flux1-schnell/resolve/main/flux1-schnell-fp8.safetensors'
+        sha256: 'ead426278b49030e9da5df862994f25ce94ab2ee4df38b556ddddb3db093bf72'
+        path: 'ComfyUI/checkpoints/'
+        type: checkpoint
+      - filename: 'flux1-fill-dev.safetensors'
+        url: 'https://huggingface.co/black-forest-labs/FLUX.1-Fill-dev/resolve/main/flux1-fill-dev.safetensors'
+        sha256: '03e289f530df51d014f48e675a9ffa2141bc003259bf5f25d75b957e920a41ca'
+        path: 'ComfyUI/diffusion_models/'
+        type: diffusion_model 
+      - filename: 'sigclip_vision_patch14_384.safetensors'
+        url: 'https://huggingface.co/Comfy-Org/sigclip_vision_384/resolve/main/sigclip_vision_patch14_384.safetensors'
+        sha256: '1fee501deabac72f0ed17610307d7131e3e9d1e838d0363aa3c2b97a6e03fb33'
+        path: 'ComfyUI/clip_vision/'
+        type: clip_vision
+      - filename: 'flux1-redux-dev.safetensors'
+        url: 'https://huggingface.co/black-forest-labs/FLUX.1-Redux-dev/resolve/main/flux1-redux-dev.safetensors'
+        sha256: 'a1b3bdcb4bdc58ce04874b9ca776d61fc3e914bb6beab41efb63e4e2694dca45'
+        path: 'ComfyUI/style_models/'
+        type: style_model
+      - filename: 'flux1-canny-dev.safetensors'
+        url: 'https://huggingface.co/black-forest-labs/FLUX.1-Canny-dev/resolve/main/flux1-canny-dev.safetensors'
+        sha256: '996876670169591cb412b937fbd46ea14cbed6933aef17c48a2dcd9685c98cdb'
+        path: 'ComfyUI/diffusion_models/'
+        type: diffusion_models
+      - filename: 'flux1-depth-dev.safetensors'
+        url: 'https://huggingface.co/black-forest-labs/FLUX.1-Depth-dev/resolve/main/flux1-depth-dev.safetensors'
+        sha256: '41360d1662f44ca45bc1b665fe6387e91802f53911001630d970a4f8be8dac21'
+        path: 'ComfyUI/diffusion_models/'
+        type: diffusion_models
+      - filename: 'flux1-canny-dev-lora.safetensors'
+        url: 'https://huggingface.co/black-forest-labs/FLUX.1-Canny-dev-lora/resolve/main/flux1-canny-dev-lora.safetensors'
+        sha256: '8eaa21b9c43d5e7242844deb64b8cf22ae9010f813f955ca8c05f240b8a98f7e'
+        path: 'ComfyUI/loras/'
+        type: lora
+      - filename: 'flux1-depth-dev-lora.safetensors'
+        url: 'https://huggingface.co/black-forest-labs/FLUX.1-Depth-dev-lora/resolve/main/flux1-depth-dev-lora.safetensors'
+        sha256: '1938b38ea0fdd98080fa3e48beb2bedfbc7ad102d8b65e6614de704a46d8b907'
+        path: 'ComfyUI/loras/'
+        type: lora
+      - filename: 'instantx_flux_canny.safetensors'
+        url: 'https://huggingface.co/InstantX/FLUX.1-dev-Controlnet-Canny/resolve/main/diffusion_pytorch_model.safetensors'
+        sha256: '55b8b2c5f8aeca6d833e70af24585b44e26a6cd25d3076471272b61dbbef6e83'
+        path: 'ComfyUI/controlnet/'
+        type: controlnet
+      - filename: 'instantx_flux_depth.safetensors'
+        url: 'https://huggingface.co/Shakker-Labs/FLUX.1-dev-ControlNet-Depth/resolve/main/diffusion_pytorch_model.safetensors'
+        sha256: 'a4ba307773cb1f51c815f5b8ddf76b199465f3e89a05676f9a0bcab9d5a23d2b'
+        path: 'ComfyUI/controlnet/'
+        type: controlnet
+      - filename: 'instantx_flux_union.safetensors'
+        url: 'https://huggingface.co/Shakker-Labs/FLUX.1-dev-ControlNet-Union-Pro/resolve/main/diffusion_pytorch_model.safetensors'
+        sha256: '981a01d6a9575e90820275eda61b33d4ecab0928c68a4f31b132b9687930f90a'
+        path: 'ComfyUI/controlnet/'
+        type: controlnet
+      - filename: 'xlabs_flux-canny-controlnet-v3.safetensors'
+        url: 'https://huggingface.co/XLabs-AI/flux-controlnet-collections/resolve/main/flux-canny-controlnet-v3.safetensors'
+        sha256: '6546f29049796101a6370db0a43d2671d0294287c36b2b4e8792cf9e68f0eaf0'
+        path: 'ComfyUI/controlnet/'
+        type: controlnet
+      - filename: 'xlabs-flux-canny-controlnet.safetensors'
+        url: 'https://huggingface.co/XLabs-AI/flux-controlnet-collections/resolve/main/flux-canny-controlnet.safetensors'
+        sha256: '46b2942e0d4eb29dfe78d946efab7c319c652256d67757efc28aa81f3bf90d35'
+        path: 'ComfyUI/controlnet/'
+        type: controlnet
+      - filename: 'xlabs-flux-canny-controlnet_v2.safetensors'
+        url: 'https://huggingface.co/XLabs-AI/flux-controlnet-collections/resolve/main/flux-canny-controlnet_v2.safetensors'
+        sha256: '552cd6bae97e8db981ec8412553a1785be793a031f17f2ebd74a21cd098dd978'
+        path: 'ComfyUI/controlnet/'
+        type: controlnet
+      - filename: 'xlabs-flux-depth-controlnet-v3.safetensors'
+        url: 'https://huggingface.co/XLabs-AI/flux-controlnet-collections/resolve/main/flux-depth-controlnet-v3.safetensors'
+        sha256: 'd52eeaf8072de89d72b1ee79e3bdc79b5d795ed0a6881a029bbe13d833df7e5f'
+        path: 'ComfyUI/controlnet/'
+        type: controlnet
+      - filename: 'xlabs-flux-depth-controlnet.safetensors'
+        url: 'https://huggingface.co/XLabs-AI/flux-controlnet-collections/resolve/main/flux-depth-controlnet.safetensors'
+        sha256: '60d49264fad0e1859bb1e64a8f51b8836f6235967cc34815d5f53414a85b6394'
+        path: 'ComfyUI/controlnet/'
+        type: controlnet
+      - filename: 'xlabs-flux-depth-controlnet_v2.safetensors'
+        url: 'https://huggingface.co/XLabs-AI/flux-controlnet-collections/resolve/main/flux-depth-controlnet_v2.safetensors'
+        sha256: 'f688fb57f7a938e6b61eacb32ad0ff814748fe01169b7faa0edcd56b9d536d99'
+        path: 'ComfyUI/controlnet/'
+        type: controlnet
+      - filename: 'xlabs-flux-hed-controlnet-v3.safetensors'
+        url: 'https://huggingface.co/XLabs-AI/flux-controlnet-collections/resolve/main/flux-hed-controlnet-v3.safetensors'
+        sha256: '31c110ae4557c19f1c2d74f824c20ea4c340161106df25cf7caf298e2f22f441'
+        path: 'ComfyUI/controlnet/'
+        type: controlnet
+      - filename: 'xlabs-flux-hed-controlnet.safetensors'
+        url: 'https://huggingface.co/XLabs-AI/flux-controlnet-collections/resolve/main/flux-hed-controlnet.safetensors'
+        sha256: '4522bc08aa6e5e2a933d77e806f4883dd8030d409c75d79c486e4d281be323d3'
+        path: 'ComfyUI/controlnet/'
+        type: controlnet
+
+  - name: 'Stable Audio Open 1.0'
+    app: ComfyUI
+    output: audio
+    models:
+      - filename: 't5_base.safetensors'
+        url: 'https://huggingface.co/google-t5/t5-base/resolve/main/model.safetensors'
+        sha256: 'a90903540cc02cbeb7ff9f823f1a80eb778c7e22426a0e620b01c77a5ec8f5b4'
+        path: 'ComfyUI/text_encoders/'
+        type: text_encoder
+      - filename: 'stable_audio_open_1.0.safetensors'
+        url: 'https://huggingface.co/stabilityai/stable-audio-open-1.0/resolve/main/model.safetensors'
+        sha256: '7b20458a071231aaf32613b6fbc7945f28f34dbba4f295bb49bad56f5f66b57e'
+        path: 'ComfyUI/checkpoints/'
+        type: checkpoint
+
+  - name: 'Lumina Image 2.0'
+    app: ComfyUI
+    output: image
+    models:
+      - filename: 'lumina_2.safetensors'
+        url: 'https://huggingface.co/Comfy-Org/Lumina_Image_2.0_Repackaged/resolve/main/all_in_one/lumina_2.safetensors'
+        sha256: 'b703b020a8ff07994e06b3dfa1b28625192bdbfa39aa086a33ea6d6fd206b186'
+        path: 'ComfyUI/checkpoints/'
+        type: checkpoint
+
   - name: 'Stable Diffusion Video 25fps' 
     app: ComfyUI
     output: video
@@ -49,7 +600,7 @@ packs:
       - filename: 'mochi_preview_fp8_scaled.safetensors' 
         url: 'https://huggingface.co/Comfy-Org/mochi_preview_repackaged/resolve/main/split_files/diffusion_models/mochi_preview_fp8_scaled.safetensors' 
         sha256: '8a6475b5380c90461a40d5c08ad574a5ad5ac4e6047e5f5f3f294df363f50705'
-        path: 'ComfyUI/diffusion_models/'
+        path: 'ComfyUI/checkpoints/'
         type: checkpoint 
       - filename: 't5xxl_fp8_e4m3fn_scaled.safetensors' 
         url: 'https://huggingface.co/Comfy-Org/mochi_preview_repackaged/resolve/main/split_files/text_encoders/t5xxl_fp8_e4m3fn_scaled.safetensors'
@@ -62,6 +613,16 @@ packs:
         path: 'ComfyUI/vae/'
         type: vae
 
+  - name: 'Mochi fp8 all in one' 
+    app: ComfyUI
+    output: video
+    models:
+      - filename: 'mochi_preview_fp8_scaled_aio.safetensors' 
+        url: 'https://huggingface.co/Comfy-Org/mochi_preview_repackaged/resolve/main/all_in_one/mochi_preview_fp8_scaled.safetensors' 
+        sha256: 'c1eb0ba4ded8df12ebbeb938c7b88a910fc380214923abcacbaab6984fa81e92'
+        path: 'ComfyUI/checkpoints/'
+        type: checkpoint 
+
   - name: 'LTX Video'
     app: ComfyUI
     output: video
@@ -69,6 +630,16 @@ packs:
       - filename: 'ltx-video-2b-v0.9.5.safetensors'
         url: 'https://huggingface.co/Lightricks/LTX-Video/resolve/main/ltx-video-2b-v0.9.5.safetensors'
         sha256: '720d15c9f19f7d0f6b2a92bbbc34410e2cfb2f6856a100b38f734fbf973d4adf'
+        path: 'ComfyUI/checkpoints/'
+        type: checkpoint
+      - filename: 'ltx-video-2b-v0.9.1.safetensors'
+        url: 'https://huggingface.co/Lightricks/LTX-Video/resolve/main/ltx-video-2b-v0.9.1.safetensors'
+        sha256: 'a23200896c5eddf215c7cb9517820c5763a2b054eb62ba86cbce6b871a4577e3'
+        path: 'ComfyUI/checkpoints/'
+        type: checkpoint
+      - filename: 'ltx-video-2b-v0.9.safetensors'
+        url: 'https://huggingface.co/Lightricks/LTX-Video/resolve/main/ltx-video-2b-v0.9.safetensors'
+        sha256: '45369c2ae94e3949b127ef99ca9fe173b077f1ca0fecf8185e4115afcbc09581'
         path: 'ComfyUI/checkpoints/'
         type: checkpoint
       - filename: 't5xxl_fp16.safetensors'
@@ -111,10 +682,10 @@ packs:
         sha256: 'c6ff2d107f0fec571fe276ad847468404ed01855c28c0be8859c3b311daec52a'
         path: 'ComfyUI/diffusion_models/'
         type: diffusion_model
-      - filename: ''
+      - filename: 'llava_llama3_vision.safetensors'
         url: 'https://huggingface.co/Comfy-Org/HunyuanVideo_repackaged/resolve/main/split_files/clip_vision/llava_llama3_vision.safetensors'
         sha256: '7d0f89bf7860815f3a994b9bdae8ebe3a29c161825d03ca9262cb13b0c973aa6'
-        path: 'ComfyUI/models/clip_vision/'
+        path: 'ComfyUI/clip_vision/'
         type: clip_vision
 
   - name: 'Nvidia Cosmos'
@@ -241,3 +812,145 @@ packs:
         sha256: '2e39adde59c5e0e90edbb35873126b0d67928b5c11c501e384e976d6dc597cce'
         path: 'ComfyUI/diffusion_models/'
         type: diffusion_model
+
+  - name: 'SDXL turbo'
+    app: ComfyUI
+    output: image
+    models:
+      - filename: 'sd_xl_turbo_1.0_fp16.safetensors'
+        url: 'https://huggingface.co/stabilityai/sdxl-turbo/resolve/main/sd_xl_turbo_1.0_fp16.safetensors'
+        sha256: 'e869ac7d6942cb327d68d5ed83a40447aadf20e0c3358d98b2cc9e270db0da26'
+        path: 'ComfyUI/checkpoints/'
+        type: checkpoint
+
+  - name: 'Stable Cascade'
+    app: ComfyUI
+    output: image
+    models:
+      - filename: 'stable_cascade_stage_b.safetensors'
+        url: 'https://huggingface.co/stabilityai/stable-cascade/resolve/main/comfyui_checkpoints/stable_cascade_stage_b.safetensors'
+        sha256: '6c218dc948575e3b14b03dffe2014d7870ac505005770ce3abdc28e920a03c05'
+        path: 'ComfyUI/checkpoints/'
+        type: checkpoint
+      - filename: 'stable_cascade_stage_c.safetensors'
+        url: 'https://huggingface.co/stabilityai/stable-cascade/resolve/main/comfyui_checkpoints/stable_cascade_stage_c.safetensors'
+        sha256: '088ddf1e444abf399007b2da2bac87791df165c69f477994f6b3c745a20904b0'
+        path: 'ComfyUI/checkpoints/'
+        type: checkpoint
+      - filename: 'stable_cascade_canny.safetensors'
+        url: 'https://huggingface.co/stabilityai/stable-cascade/resolve/main/controlnet/canny.safetensors'
+        sha256: '0c286537128bbe4a6127c9d9edf0ea5fbd25d3f13764003adb26d5b45330248a'
+        path: 'ComfyUI/controlnet/'
+        type: controlnet
+      - filename: 'stable_cascade_inpainting.safetensors'
+        url: 'https://huggingface.co/stabilityai/stable-cascade/resolve/main/controlnet/inpainting.safetensors'
+        sha256: 'e115e477addc7ad34156a743a922ef8bef248be791d3846008a2220a198da7c4'
+        path: 'ComfyUI/controlnet/'
+        type: controlnet
+      - filename: 'stable_cascade_super_resolution.safetensors'
+        url: 'https://huggingface.co/stabilityai/stable-cascade/resolve/main/controlnet/super_resolution.safetensors'
+        sha256: '91aa02e90bce912fcb00dad4c864be9c3f31737ce4239f8276418f48954c2f42'
+        path: 'ComfyUI/controlnet/'
+        type: controlnet
+
+  - name: 'SD3.5'
+    app: ComfyUI
+    output: image
+    models:
+      - filename: 'clip_l.safetensors'
+        url: 'https://huggingface.co/Comfy-Org/stable-diffusion-3.5-fp8/resolve/main/text_encoders/clip_l.safetensors'
+        sha256: '660c6f5b1abae9dc498ac2d21e1347d2abdb0cf6c0c0c8576cd796491d9a6cdd'
+        path: 'ComfyUI/text_encoders/'
+        type: text_encoder
+      - filename: 'clip_g.safetensors'
+        url: 'https://huggingface.co/Comfy-Org/stable-diffusion-3.5-fp8/resolve/main/text_encoders/clip_g.safetensors'
+        sha256: 'ec310df2af79c318e24d20511b601a591ca8cd4f1fce1d8dff822a356bcdb1f4'
+        path: 'ComfyUI/text_encoders/'
+        type: text_encoder
+      - filename: 't5xxl_fp16.safetensors'
+        url: 'https://huggingface.co/Comfy-Org/stable-diffusion-3.5-fp8/resolve/main/text_encoders/t5xxl_fp16.safetensors'
+        sha256: '6e480b09fae049a72d2a8c5fbccb8d3e92febeb233bbe9dfe7256958a9167635'
+        path: 'ComfyUI/text_encoders/'
+        type: text_encoder
+      - filename: 't5xxl_fp8_e4m3fn.safetensors'
+        url: 'https://huggingface.co/Comfy-Org/stable-diffusion-3.5-fp8/resolve/main/text_encoders/t5xxl_fp8_e4m3fn.safetensors'
+        sha256: '7d330da4816157540d6bb7838bf63a0f02f573fc48ca4d8de34bb0cbfd514f09'
+        path: 'ComfyUI/text_encoders/'
+        type: text_encoder
+      - filename: 't5xxl_fp8_e4m3fn_scaled.safetensors'
+        url: 'https://huggingface.co/Comfy-Org/stable-diffusion-3.5-fp8/resolve/main/text_encoders/t5xxl_fp8_e4m3fn_scaled.safetensors'
+        sha256: 'a498f0485dc9536735258018417c3fd7758dc3bccc0a645feaa472b34955557a'
+        path: 'ComfyUI/text_encoders/'
+        type: text_encoder
+      - filename: 'sd3.5_large.safetensors'
+        url: 'https://huggingface.co/stabilityai/stable-diffusion-3.5-large/resolve/main/sd3.5_large.safetensors'
+        sha256: 'ffef7a279d9134626e6ce0d494fba84fc1c7e720b3c7df2d19a09dc3796d8f93'
+        path: 'ComfyUI/checkpoints/'
+        type: checkpoint 
+      - filename: 'sd3.5_large_fp8_scaled.safetensors'
+        url: 'https://huggingface.co/Comfy-Org/stable-diffusion-3.5-fp8/resolve/main/sd3.5_large_fp8_scaled.safetensors'
+        sha256: '5ad94d6f951556b1ab6b75930fd4effbafaf3130fe9df440e7f2d05a220dd1be'
+        path: 'ComfyUI/checkpoints/'
+        type: checkpoint
+      - filename: 'sd3.5_medium_incl_clips_t5xxlfp8scaled.safetensors'
+        url: 'https://huggingface.co/Comfy-Org/stable-diffusion-3.5-fp8/resolve/main/sd3.5_medium_incl_clips_t5xxlfp8scaled.safetensors'
+        sha256: '1778e8857679042c176c21cd8a0da7b29bded68be018557477f84419df79bacf'
+        path: 'ComfyUI/checkpoints/'
+        type: checkpoint
+      - filename: 'sd3.5_medium.safetensors'
+        url: 'https://huggingface.co/stabilityai/stable-diffusion-3.5-medium/resolve/main/sd3.5_medium.safetensors'
+        sha256: '11fe06e22364b823dfeedc275912336b932b32a293a0b2f35ffac071990cc4de'
+        path: 'ComfyUI/checkpoints/'
+        type: checkpoint
+      - filename: 'sd3.5_large_turbo.safetensors'
+        url: 'https://huggingface.co/stabilityai/stable-diffusion-3.5-large-turbo/resolve/main/sd3.5_large_turbo.safetensors'
+        sha256: 'fb64610bf8d73eb064b8d528eef85d062bf2b4b1204ff7bc73e57ad28b24489c'
+        path: 'ComfyUI/checkpoints/'
+        type: checkpoint
+      - filename: 'sd3.5_large_controlnet_blur.safetensors'
+        url: 'https://huggingface.co/stabilityai/stable-diffusion-3.5-controlnets/resolve/main/sd3.5_large_controlnet_blur.safetensors'
+        sha256: '43d71c6f570d93e04a2d00711c530c74dcd7eef5d322efaab967c2d8296854dc'
+        path: 'ComfyUI/controlnet/'
+        type: controlnet
+      - filename: 'sd3.5_large_controlnet_canny.safetensors'
+        url: 'https://huggingface.co/stabilityai/stable-diffusion-3.5-controlnets/resolve/main/sd3.5_large_controlnet_canny.safetensors'
+        sha256: '4bc5cf949f6501a4bd125c6c1190e8fba0f1471f5ce36e9ebd1114867abedd4c'
+        path: 'ComfyUI/controlnet/'
+        type: controlnet
+      - filename: 'sd3.5_large_controlnet_depth.safetensors'
+        url: 'https://huggingface.co/stabilityai/stable-diffusion-3.5-controlnets/resolve/main/sd3.5_large_controlnet_depth.safetensors'
+        sha256: 'd6ded6aa4f60eda74ae48a8fdc1a9fa11b36f05488975916f1ecd4834fddffd0'
+        path: 'ComfyUI/controlnet/'
+        type: controlnet
+
+  - name: 'AuraFlow'
+    app: ComfyUI
+    output: image
+    models:
+      - filename: 'aura_flow_0.2.safetensors'
+        url: 'https://huggingface.co/fal/AuraFlow-v0.2/resolve/main/aura_flow_0.2.safetensors'
+        sha256: 'e74e424b409ce5a9d7b5487f00610ec048930918fba875c6beeed88255844b7e'
+        path: 'ComfyUI/checkpoints/'
+        type: checkpoint
+
+  - name: 'Hunyuan DiT'
+    app: ComfyUI
+    output: image
+    models:
+      - filename: 'hunyuan_dit_1.2.safetensors'
+        url: 'https://huggingface.co/comfyanonymous/hunyuan_dit_comfyui/resolve/main/hunyuan_dit_1.2.safetensors'
+        sha256: '4fb84f84079cda457d171b3c6b15d1be95b5a3e5d9825703951a99ddf92d1787'
+        path: 'ComfyUI/checkpoints/'
+        type: checkpoint
+
+
+#  - name: ''
+#    app: ComfyUI
+#    output: image
+#    models:
+#      - filename: ''
+#        url: ''
+#        sha256: ''
+#        path: ''
+#        type:
+
