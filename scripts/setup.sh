@@ -11,11 +11,17 @@ function cleanup()
 
 trap cleanup EXIT
 
-function setupLocalAI()
+function startLocalAI()
+{
+  pushd ${AIDIR}/LocalAI
+  docker compose up -d
+  popd
+}
+
+function stopLocalAI()
 {
   pushd ${AIDIR}/LocalAI
   docker compose down
-  docker compose up -d
   popd
 }
 
@@ -27,9 +33,20 @@ function setupAnythingllm()
   fi
   cp docker/anything-llm/docker-compose.yaml anything-llm/docker/docker-compose.yml
   cp docker/anything-llm/.env anything-llm/docker
-  cd anything-llm/docker
-  docker compose down
+  popd
+}
+
+function startAnythingllm()
+{
+  pushd ${AIDIR}/anything-llm/docker
   docker compose up -d
+  popd
+}
+
+function stopAnythingllm()
+{
+  pushd ${AIDIR}/anything-llm/docker
+  docker compose down
   popd
 }
 
@@ -43,21 +60,38 @@ function setupSearxng()
   cp docker/searxng/.env searxng/
   mkdir searxng/searxng
   cp config/searxng/settings.yml searxng/searxng/
-  cd searxng
-  docker compose down
+  popd
+}
+
+function startSearxing()
+{
+  cd ${AIDIR}/searxng
   docker compose up -d
   popd
 }
 
-function setupOpenwebui()
+function stopSearxing()
+{
+  cd ${AIDIR}/searxng
+  docker compose down
+  popd
+}
+
+function startOpenwebui()
 {
   pushd ${AIDIR}/openwebui
-  docker compose down
   docker compose up -d
   echo Waiting for first setup
   sleep 60
   docker compose down
   docker compose up -d
+  popd
+}
+
+function stopOpenwebui()
+{
+  pushd ${AIDIR}/openwebui
+  docker compose down
   popd
 }
 
@@ -68,9 +102,20 @@ function setupOpenwebuiPipelines()
     git clone https://github.com/open-webui/pipelines.git
   fi
   cp docker/pipelines/docker-compose.yaml pipelines
-  cd pipelines
-  docker compose down
+  popd
+}
+
+function startOpenwebuiPipelines()
+{
+  pushd ${AIDIR}/pipelines
   docker compose up -d
+  popd
+}
+
+function stopOpenwebuiPipelines()
+{
+  pushd ${AIDIR}/pipelines
+  docker compose down
   popd
 }
 
@@ -85,9 +130,20 @@ function setupTelegramBot()
   cp config/chatgpt_telegram_bot/config.yml chatgpt_telegram_bot/config/
   cp config/chatgpt_telegram_bot/config.env chatgpt_telegram_bot/config/
   sed -i "s/telegram_token:.*/telegram_token: \"$TOKEN\"/" chatgpt_telegram_bot/config/config.yml
-  cd chatgpt_telegram_bot
-  docker compose down
+  popd
+}
+
+function startTelegramBot()
+{
+  pushd ${AIDIR}/chatgpt_telegram_bot
   docker compose up --build -d
+  popd
+}
+
+function stopTelegramBot()
+{
+  pushd ${AIDIR}/chatgpt_telegram_bot
+  docker compose down
   popd
 }
 
@@ -98,13 +154,24 @@ function setupComfyUI()
     git clone https://github.com/YanWenKun/ComfyUI-Docker.git 
   fi
   cp docker/cu124-megapak/docker-compose.yaml ComfyUI-Docker/cu124-megapak/
-  cd ComfyUI-Docker/cu124-megapak
-  docker compose down
+  popd
+}
+
+function startComfyUI()
+{
+  pushd ${AIDIR}/ComfyUI-Docker/cu124-megapak
   docker compose up -d
   popd
 }
 
-function setupSstableDiffusionWebui()
+function stopComfyUI()
+{
+  pushd ${AIDIR}/ComfyUI-Docker/cu124-megapak
+  docker compose down
+  popd
+}
+
+function setupStableDiffusionWebui()
 {
   pushd ${AIDIR}
   if [ ! -d ComfyUI-Docker ]; then 
@@ -113,8 +180,12 @@ function setupSstableDiffusionWebui()
   cp docker/stable-diffusion-webui-docker/docker-compose.yaml stable-diffusion-webui-docker/
   # temp fix, todo: fork git and replace there
   cp docker/stable-diffusion-webui-docker/Dockerfile stable-diffusion-webui-docker/services/AUTOMATIC1111/
-  cd stable-diffusion-webui-docker 
-  docker compose down
+  popd
+}
+
+function startStableDiffusionWebui()
+{
+  pushd ${AIDIR}/stable-diffusion-webui-docker 
   # download models
   docker compose --profile download up --build
   # start container
@@ -122,20 +193,34 @@ function setupSstableDiffusionWebui()
   popd
 }
 
-function setupNgix()
+function stopStableDiffusionWebui()
+{
+  pushd ${AIDIR}/stable-diffusion-webui-docker 
+  docker compose down
+  popd
+}
+
+function startNgix()
 {
   pushd ${AIDIR}/nginx
-  docker compose down
   docker compose up -d
   popd
 }
 
-setupLocalAI
+function stopNgix()
+{
+  pushd ${AIDIR}/nginx
+  docker compose down
+  popd
+}
+
 setupSearxng
 setupAnythingllm
-setupOpenwebui
 setupOpenwebuiPipelines
 setupComfyUI
 setupSstableDiffusionWebui
 setupTelegramBot
-setupNginx
+
+#startLocalAI
+#startNginx
+#startOpenwebui
